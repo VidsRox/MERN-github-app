@@ -4,6 +4,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaEye } from "react-icons/fa";
 import { TfiThought } from "react-icons/tfi";
 import { formatMemberSince } from "../utils/functions";
+import LikeProfile from "./LikeProfile.jsx";
 
 const ProfileInfo = ({ userProfile }) => {
 	if (!userProfile) {
@@ -22,6 +23,7 @@ const ProfileInfo = ({ userProfile }) => {
 			</a>
 			{/* User Info */}
 			<div className='flex gap-2 items-center flex-col'>
+				< LikeProfile userProfile={userProfile} />
 			  <a
 				href={userProfile?.html_url} // Using optional chaining here
 				target='_blank'
